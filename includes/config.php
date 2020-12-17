@@ -1,13 +1,14 @@
 <?php
-    ob_start(); // Turns on output buffering
-    session_start();
+ob_start(); // Turns on output buffering
+session_start();
 
-    date_default_timezone_set("America/Los_Angeles");
+date_default_timezone_set("America/Los_Angeles");
 
-    try {
-        $con = new PDO("mysql:dbname=wesflix;host=localhost", "root", "");
-        $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-    } catch (PDOException $e) {
-        exit("Connection failed: " . $e->getMessage());
-    }
+try {
+    $con = new PDO("mysql:dbname=wesflix;host=localhost", "root", "");
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+}
+catch (PDOException $e) {
+    exit("Connection failed: " . $e->getMessage());
+}
 ?>
