@@ -139,18 +139,24 @@ a h3:hover {
     object-fit: cover;
 }
 
-.previewOverlay .mainDetails h3 {
-    color: white;
-    font-size: 40px;
-    margin: 15px 0;
-}
-
 .previewOverlay .mainDetails {
     position: relative;
     top: 35%;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
+}
+
+.previewOverlay .mainDetails h3 {
+    color: white;
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.previewOverlay .mainDetails h4 {
+    color: white;
+    font-size: 20px;
+    margin: 15px 0;
 }
 
 .mainDetails button {
@@ -219,6 +225,7 @@ button i {
     display: flex;
     flex-direction: column;
     width: 230px;
+    position: relative;
 }
 
 .episodeContainer img {
@@ -276,4 +283,82 @@ button i {
 .upNextContainer h2,
 .upNextContainer h3 {
     color: white;
+}
+
+.watchNav {
+    z-index: 2;
+}
+
+.seen {
+    position: absolute;
+    color: #2ecc71;
+    font-size: 26px;
+    top: 5px;
+    left: 5px;
+}
+
+.topBar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    height: 70px;
+    box-sizing: border-box;
+    min-width: 1050px;
+    transition: background-color 200ms linear;
+}
+
+.topBar.scrolled {
+    background-color: #141414;
+    transition: background-color 200ms linear;
+}
+
+.logoContainer {
+    height: 40px;
+}
+
+.logoContainer img {
+    height: 100%;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+}
+
+.navLinks a {
+    color: white;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.rightItems {
+    flex: 1;
+    text-align: right;
+}
+
+.rightItems i {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.previewCategories h1 {
+    color: #e5e5e5;
+}
+
+.textboxContainer {
+    padding: 100px 50px;
+}
+
+.searchInput {
+    background-color: transparent;
+    height: 35px;
+    width: 375px;
+    border: 1px solid #dedede;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
 }
